@@ -29,6 +29,19 @@ func main(){
 
 	///  two go routine cann't share the same stack
 
+	println("pointer semantics ---------------------")
+
+	var p  *int
+	fmt.Println(p , &p , *&p)
+	pointer(&p)
+
+	intVal :=100
+	
+
+	fmt.Println(intVal, &intVal)
+
+	p = &intVal
+	fmt.Println(p , &p , *p)
 
 
 
@@ -47,6 +60,12 @@ func increment1( inc *int){
 
 }
 
+func pointer(p **int){
+	fmt.Println("insider Pointer func")
+	fmt.Println(p , *p, &p) 
+	twelve :=12
+	*p = &twelve
+}
 type example struct {
 	floatVal float64
 	intVal   int

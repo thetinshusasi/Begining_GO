@@ -5,6 +5,8 @@ import (
 )
 
 /// basic types in Go
+/// always use var for zero value
+
 func main() {
 	// size of int is based on the pointer size / Word size of the hardware its running on
 	var integer int
@@ -65,6 +67,14 @@ func main() {
 
 	ex = ex3
 	println(ex.floatVal)
+
+	/// two different types of slice
+	fmt.Println("two different types of slice")
+	var zeroValueSlice []string   /// pointer points to nil
+	emptyValueSlice := []string{} /// pointer points to empty struct
+	fmt.Println(zeroValueSlice, emptyValueSlice)
+	fmt.Printf("%T \n", zeroValueSlice)
+	fmt.Printf("%T \n", emptyValueSlice)
 
 }
 
