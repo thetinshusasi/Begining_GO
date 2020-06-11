@@ -21,8 +21,12 @@ func main() {
 		},
 		lastName: "james",
 	}
+
 	/// this is embedding  inner type is promoted to use by the outer type
 	/// if both inner type and outer type implements the same interface then outer type implementation
 	/// takes precedence
 	ad.displayFirstName()
+
+	var user1 User = ad.User
+	user1.displayFirstName()
 }
