@@ -5,6 +5,9 @@ import (
 	"fmt"
 )
 
+// // when should we use interfaces
+// 1) if the we need the user to send a data the implements that functionality
+// 2)if we know there would be multiple functionality exist or will exist in future
 type Reader interface {
 	read(b []byte) (int, error)
 
