@@ -24,6 +24,9 @@ type Reader interface {
 	/// when we are trying to set concrete type to interface type and then trying to call the concrete type reciever methods
 	/// via interface variable . Then method call success will depend upon signature of receiver method
 	/// ie value receiver methods can be called by both by  pointer ref and value ref but not vice versa
+
+	// interface consistency is checked at compile time , as we are defered from responsibility of 
+	// creating interfaces for the testing for our application users
 }
 
 type Writer interface {
